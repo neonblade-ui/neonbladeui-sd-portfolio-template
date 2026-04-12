@@ -11,6 +11,12 @@ This free, open-source template showcases:
 
 Built with reusable NeonBlade UI components on top of Next.js App Router.
 
+## Live Preview
+
+Preview the template here:
+
+- https://neonbladeui.neuronrush.com/templates/software-developer-portfolio
+
 ## Tech Stack
 
 - Next.js 16
@@ -112,3 +118,7 @@ Fonts are configured in `src/app/layout.tsx` using `next/font/google`.
 ## Free and Open Source
 
 This project is intended to be a free open-source starter/template for developer portfolios.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
