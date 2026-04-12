@@ -18,7 +18,7 @@ const orbitron = Orbitron({
 });
 
 export const metadata: Metadata = {
-  title: "NeonBlade UI - SD Portfolio",
+  title: "NeonBlade UI - SD Portfolio template",
   description: "",
 };
 

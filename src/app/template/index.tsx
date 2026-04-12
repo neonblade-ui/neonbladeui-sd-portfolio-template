@@ -14,6 +14,7 @@ import { CornerCutButton } from "../../components/neonblade-ui/corner-cut-button
 import { NeonGlowCornerCutCard } from "../../components/neonblade-ui/neon-glow-corner-cut-card";
 import { Badge } from "../../components/neonblade-ui/badge";
 import { Timeline } from "../../components/neonblade-ui/timeline";
+
 import {
   Footer,
   GithubIcon,
