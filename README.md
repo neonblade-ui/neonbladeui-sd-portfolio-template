@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NeonBlade UI - Software Developer Portfolio Template
+
+A sleek, dark-themed portfolio template for developers.
+
+This free, open-source template showcases:
+
+- Skills
+- Projects
+- Experience timeline
+- Contact and social links
+
+Built with reusable NeonBlade UI components on top of Next.js App Router.
+
+## Tech Stack
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- next/font (Geist, Geist Mono, Orbitron)
+
+## Project Structure
+
+Key files and folders:
+
+```text
+src/
+	app/
+		layout.tsx           # Root layout and fonts
+		page.tsx             # Home route entry point
+		template/index.tsx   # SoftwareDeveloperPortfolio component + CONFIG
+	components/
+		neonblade-ui/        # Reusable NeonBlade UI components
+```
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run in development:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000` in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Build and run production:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+Lint:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Customize Your Portfolio
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+All primary content is centralized in:
 
-## Deploy on Vercel
+- `src/app/template/index.tsx`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Update the `CONFIG` object to personalize the template:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `name`, `title`, `tagline`, `location`, `email`, `resumeUrl`
+- `navItems`
+- `skills`
+- `projects`
+- `experience`
+- `socialLinks`
+- `accentColor` and `accentColorB`
+
+The portfolio sections included are:
+
+- Hero
+- About
+- Projects
+- Experience
+- Contact
+- Footer
+
+## NeonBlade UI Components Used
+
+This template composes the following UI components:
+
+- `navbar`
+- `corner-cut-button`
+- `neon-glow-corner-cut-card`
+- `badge`
+- `timeline`
+- `footer`
+- `accent-frame`
+- `glitch-text`
+- `datalines-with-grid`
+
+## Fonts
+
+Fonts are configured in `src/app/layout.tsx` using `next/font/google`.
+
+- Geist
+- Geist Mono
+- Orbitron (used by the portfolio headline and section typography)
+
+## Free and Open Source
+
+This project is intended to be a free open-source starter/template for developer portfolios.
