@@ -20,7 +20,7 @@ const orbitron = Orbitron({
 export const metadata: Metadata = {
   title: "NeonBlade UI - SD Portfolio template",
   description:
-    "A software developer portfolio template built using NeonBlade UI components.",
+    "A software developer portfolio template built using NeonBlade UI components",
 };
 
 export default function RootLayout({
