@@ -1,0 +1,162 @@
+/* ============================================================
+   Footer — footer.css
+   All class names are prefixed with `ftc-` to avoid conflicts.
+
+   CSS custom properties driven by the component (set inline):
+     --ftc-color  : accent color (e.g. #00f3ff)
+     --ftc-font   : font family
+============================================================ */
+
+/* ---- Root Variables -------------------------------------- */
+
+.ftc-root {
+  --ftc-transition: 240ms cubic-bezier(0.4, 0, 0.2, 1);
+  --ftc-border: rgba(255, 255, 255, 0.07);
+}
+
+/* ---- Top border glow ------------------------------------- */
+
+.ftc-border-top {
+  border-top: 1px solid color-mix(in srgb, var(--ftc-color) 20%, transparent);
+  box-shadow: 0 -1px 0 0 color-mix(in srgb, var(--ftc-color) 10%, transparent);
+}
+
+/* ---- Shared: Logo ---------------------------------------- */
+
+.ftc-logo-img {
+  filter: drop-shadow(
+    0 0 6px color-mix(in srgb, var(--ftc-color) 65%, transparent)
+  );
+}
+
+.ftc-logo:hover .ftc-logo-text {
+  color: var(--ftc-color);
+  text-shadow: 0 0 10px color-mix(in srgb, var(--ftc-color) 55%, transparent);
+}
+
+/* ---- Shared: Links --------------------------------------- */
+
+.ftc-link {
+  display: inline-block;
+  font-family: var(--ftc-font);
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+  transition:
+    color var(--ftc-transition),
+    text-shadow var(--ftc-transition);
+  white-space: nowrap;
+}
+
+.ftc-link:hover {
+  color: var(--ftc-color);
+  text-shadow: 0 0 8px color-mix(in srgb, var(--ftc-color) 50%, transparent);
+}
+
+/* ---- Shared: Link group ---------------------------------- */
+
+.ftc-link-group-title {
+  text-shadow: 0 0 8px color-mix(in srgb, var(--ftc-color) 45%, transparent);
+}
+
+/* ---- Shared: Social buttons ------------------------------ */
+
+.ftc-social-btn {
+  border: 1px solid color-mix(in srgb, var(--ftc-color) 22%, transparent);
+  background: color-mix(in srgb, var(--ftc-color) 6%, transparent);
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+  transition:
+    color var(--ftc-transition),
+    border-color var(--ftc-transition),
+    background var(--ftc-transition),
+    box-shadow var(--ftc-transition);
+}
+
+.ftc-social-btn:hover {
+  color: var(--ftc-color);
+  border-color: var(--ftc-color);
+  background: color-mix(in srgb, var(--ftc-color) 12%, transparent);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--ftc-color) 35%, transparent);
+}
+
+/* ---- Shared: Newsletter ---------------------------------- */
+
+.ftc-newsletter {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  width: 100%;
+  max-width: 22rem;
+}
+
+.ftc-newsletter-input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.55rem 0.875rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid color-mix(in srgb, var(--ftc-color) 25%, transparent);
+  border-right: none;
+  color: #fff;
+  font-family: var(--ftc-font);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  outline: none;
+  transition:
+    border-color var(--ftc-transition),
+    background var(--ftc-transition);
+}
+
+.ftc-newsletter-input::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+  font-family: var(--ftc-font);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.ftc-newsletter-input:focus {
+  border-color: var(--ftc-color);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.ftc-newsletter-btn {
+  padding: 0.55rem 1.1rem;
+  background: color-mix(in srgb, var(--ftc-color) 18%, transparent);
+  border: 1px solid color-mix(in srgb, var(--ftc-color) 50%, transparent);
+  color: var(--ftc-color);
+  font-family: var(--ftc-font);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background var(--ftc-transition),
+    border-color var(--ftc-transition),
+    box-shadow var(--ftc-transition),
+    color var(--ftc-transition);
+}
+
+.ftc-newsletter-btn:hover {
+  background: color-mix(in srgb, var(--ftc-color) 28%, transparent);
+  border-color: var(--ftc-color);
+  box-shadow: 0 0 14px color-mix(in srgb, var(--ftc-color) 35%, transparent);
+  color: #fff;
+}
+
+.ftc-newsletter-label {
+  font-family: var(--ftc-font);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  margin: 0 0 0.5rem;
+}
+
+/* Variant layout handled by Tailwind in component JSX */

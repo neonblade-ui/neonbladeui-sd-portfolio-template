@@ -1,0 +1,111 @@
+/* ============================================================
+   Badge — badge.css  (stripped: layout/typography moved to Tailwind)
+
+   Retained: clip-path geometry, glow box-shadow (uses color-mix),
+             dot keyframe animations.
+
+   CSS custom properties set inline by the component:
+     --bdg-color       : accent color
+     --bdg-corner-size : diagonal cut depth in px (corner-cut only)
+============================================================ */
+
+/* ---- Clip paths (corner-cut shapes) ----------------------- */
+
+.bdg-clip-br {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - var(--bdg-corner-size, 8px)),
+    calc(100% - var(--bdg-corner-size, 8px)) 100%,
+    0 100%
+  );
+}
+
+.bdg-clip-bl {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    var(--bdg-corner-size, 8px) 100%,
+    0 calc(100% - var(--bdg-corner-size, 8px))
+  );
+}
+
+.bdg-clip-tr {
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--bdg-corner-size, 8px)) 0,
+    100% var(--bdg-corner-size, 8px),
+    100% 100%,
+    0 100%
+  );
+}
+
+.bdg-clip-tl {
+  clip-path: polygon(
+    var(--bdg-corner-size, 8px) 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    0 var(--bdg-corner-size, 8px)
+  );
+}
+
+.bdg-clip-all {
+  clip-path: polygon(
+    var(--bdg-corner-size, 8px) 0,
+    100% 0,
+    100% calc(100% - var(--bdg-corner-size, 8px)),
+    calc(100% - var(--bdg-corner-size, 8px)) 100%,
+    0 100%,
+    0 var(--bdg-corner-size, 8px)
+  );
+}
+
+/* ---- Glow (uses color-mix — cannot be Tailwind) ----------- */
+
+.bdg-glow {
+  box-shadow: 0 0 12px color-mix(in srgb, var(--bdg-color) 65%, transparent);
+  text-shadow: 0 0 6px color-mix(in srgb, var(--bdg-color) 80%, transparent);
+}
+
+/* ---- Dot animations --------------------------------------- */
+
+@keyframes bdg-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes bdg-flicker {
+  0%,
+  19.999%,
+  22%,
+  62.999%,
+  64%,
+  64.999%,
+  70%,
+  100% {
+    opacity: 1;
+  }
+  20%,
+  21.999%,
+  63%,
+  63.999%,
+  65%,
+  69.999% {
+    opacity: 0.15;
+  }
+}
+
+.bdg-dot-pulse {
+  animation: bdg-pulse 1.5s ease-in-out infinite;
+}
+
+.bdg-dot-flicker {
+  animation: bdg-flicker 0.45s linear infinite;
+}
