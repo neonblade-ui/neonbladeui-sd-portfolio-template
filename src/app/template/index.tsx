@@ -1,13 +1,12 @@
 ﻿"use client";
 
 /**
- * NeonBlade UI â€” Software Developer Portfolio Template
- * â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+ * NeonBlade UI — Software Developer Portfolio Template
  * Free & open-source. Built with NeonBlade UI components.
  * Customise src/app/template/config.tsx to make it yours.
  * Switch themes in themes.ts or via the floating ThemeSwitcher.
  *
- * Sections: Hero Â· About Â· Projects Â· Experience Â· Contact Â· Footer
+ * Sections: Hero · About · Projects · Experience · Contact · Footer
  */
 
 import { useState } from "react";
@@ -68,7 +67,7 @@ export default function SoftwareDeveloperPortfolio() {
           { label: "Contact", href: "#contact" },
         ]}
         socialLinks={CONFIG.socialLinks}
-        copyright={`© {year} ${CONFIG.name} · Built with NeonBlade UI`}
+        copyright={`© ${new Date().getFullYear()} ${CONFIG.name} · Built with NeonBlade UI`}
       />
     </div>
   );
