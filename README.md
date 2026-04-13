@@ -15,7 +15,7 @@ Built with reusable NeonBlade UI components on top of Next.js App Router.
 
 Preview the template here:
 
-- https://neonbladeui.neuronrush.com/templates/software-developer-portfolio
+- https://neonbladeui-sd-portfolio-template.vercel.app/
 
 ## Tech Stack
 
