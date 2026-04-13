@@ -15,7 +15,7 @@ export const CONFIG = {
   tagline:
     "I build digital experiences that live at the intersection of design and engineering.",
   location: "San Francisco, CA",
-  email: "alex@example.com",
+  email: "vic@example.com",
   resumeUrl: "#",
 
   // ── Change to "S1" | "M3" | "S5" to set the default theme ──────────────────
