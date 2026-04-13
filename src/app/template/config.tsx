@@ -10,7 +10,7 @@ import type { THEMES } from "./themes";
 
 export const CONFIG = {
   // ── Personal info ────────────────────────────────────────────────────────────
-  name: "Alex Mercer",
+  name: "Vic Prime",
   title: "Full Stack Developer",
   tagline:
     "I build digital experiences that live at the intersection of design and engineering.",
